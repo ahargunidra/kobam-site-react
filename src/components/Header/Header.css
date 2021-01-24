@@ -5,16 +5,9 @@
     font-size: 20px;
 }
 
-@media only screen and (min-width: 1000px) {
-    .h1-judul{
-        position: absolute;
-        left: 120px;
-    }
-    .p-judul {
-        position: relative;
-        top: 30px;
-        left: 120px;
-        font-size: 20px;
+@media (max-width: 629px) {
+    #about-us {
+        display: none;
     }
 }
 .h1-judul {
