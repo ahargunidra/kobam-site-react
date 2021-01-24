@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/HeaderMenu"
+import React from "react";
+import Navbar from "./components/navbar/Navbar";
+import Body from "./components/content/Body";
+import Footer from "./components/footer/Footer";
 
 function App() {
-    return (
-        <div className="App">
-            <Navbar />
-            <Header />
-        </div>
-    );
+  return (
+    <React.Fragment>
+      <Navbar></Navbar>
+      <Body></Body>
+      <Footer></Footer>
+    </React.Fragment>
+  );
 }
 
 export default App;
