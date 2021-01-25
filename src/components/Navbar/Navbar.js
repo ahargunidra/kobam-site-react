@@ -1,37 +1,48 @@
-import React, { Component } from 'react';
-import { MenuItems } from "./MenuItems"
-import { Button } from "../Button"
-import './Navbar.css'
-
-class Navbar extends Component {
-    state = { clicked: false }
-
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked })
-    }
-
-    render() {
-        return(
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">Kobam<i className="fab fa-react"></i></h1>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return (
-                            <li key={index}>
-                                <a className={item.cName} href={item.url}>
-                                {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
-
-            </nav>
-        )
-    }
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link, useLocation } from "react-router-dom";
+import "./navbar.css";
+function Navbar() {
+  const location = useLocation();
+  return (
+    <header>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-danger">
+        <div className="container">
+          <a className="navbar-brand" href="#">
+            Kobam <img src="/img/coding.svg" alt="coding" width="40px" />
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav ms-auto">
+              <Link
+                to="/"
+                className={`nav-link ${location.pathname === "/" && "active"}`}
+              >
+                Home
+              </Link>
+              <Link
+                to="/tutorial"
+                className={`nav-link ${
+                  location.pathname === "/tutorial" && "active"
+                }`}
+              >
+                Tutorial
+              </Link>
+              <a className="nav-link" href="#about-us">
+                About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
-export default Navbar
+export default Navbar;

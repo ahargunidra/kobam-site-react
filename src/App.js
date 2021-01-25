@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/HeaderMenu"
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./components/content/Home";
+import Tutorial from "./components/content/tutorial/Tutorial";
+import Navbar from "./components/navbar/Navbar";
+import "./App.css";
 
 function App() {
-    return (
-        <div className="App">
-            <Navbar />
-            <Header />
-        </div>
-    );
+  return (
+    <Router>
+      <Navbar />
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/tutorial">
+        <Tutorial />
+      </Route>
+    </Router>
+  );
 }
 
 export default App;
