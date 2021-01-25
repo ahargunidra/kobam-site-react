@@ -3,7 +3,7 @@ import "./footer.css";
 function Footer() {
   const tanggal = new Date();
   return (
-    <footer className="footer py-3 bg-danger mt-4">
+    <footer className="footer py-3 bg-danger mt-auto">
       <div className="container">
         <div className="text-center">
           <span className="text-light">

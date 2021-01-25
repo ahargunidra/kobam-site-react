@@ -1,6 +1,6 @@
 function About() {
   return (
-    <>
+    <div className="mb-4">
       <h1 className="text-center" data-aos="zoom-in" id="about-us">
         About Us
       </h1>
@@ -22,7 +22,7 @@ function About() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -15,10 +15,12 @@ function Body() {
   return (
     <>
       <Jumbotorn />
-      <div className="container">
-        <Artikel />
-        <About />
-      </div>
+      <main className="flex-shrink-0 mt-3">
+        <div className="container">
+          <Artikel />
+          <About />
+        </div>
+      </main>
     </>
   );
 }

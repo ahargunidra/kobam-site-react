@@ -3,7 +3,7 @@ function Artikel() {
   const b = 3;
 
   return (
-    <main className="flex-shrink-0 mt-3">
+    <>
       <h1 className="mb-3" data-aos="zoom-in">
         Artikel
       </h1>
@@ -33,7 +33,7 @@ function Artikel() {
           ))}
         </div>
       ))}
-    </main>
+    </>
   );
 }
 
