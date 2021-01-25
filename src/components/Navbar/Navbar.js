@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from "react-router-dom";
 import "./navbar.css";
 function Navbar() {
   return (
@@ -18,13 +19,13 @@ function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link to="/" className="nav-link active">
                 Home
-              </a>
-              <a className="nav-link" href="#">
+              </Link>
+              <Link to="/tutorial" className="nav-link active">
                 Tutorial
-              </a>
-              <a className="nav-link" href="#">
+              </Link>
+              <a className="nav-link" href="#about-us">
                 About Us
               </a>
             </div>
